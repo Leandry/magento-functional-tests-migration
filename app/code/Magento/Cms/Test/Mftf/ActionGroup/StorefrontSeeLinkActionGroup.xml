@@ -15,7 +15,6 @@
         <see stepKey="SeeElement" selector="{{StorefrontFooterSection.footerLinks}}" userInput="{{linkName}}"/>
         <click stepKey="clickLink" selector="{{StorefrontFooterSection.footerLinkByText(linkName)}}"/>
         <waitForPageLoad stepKey="waitForPageLoad"/>
-        <
 
     </actionGroup>
 </actionGroups>
