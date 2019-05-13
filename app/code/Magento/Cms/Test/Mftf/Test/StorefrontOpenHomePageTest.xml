@@ -1,0 +1,26 @@
+<tests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="urn:magento:mftf:Test/etc/testSchema.xsd">
+    <test name="StorefrontOpenHomePageTest">
+        <annotations>
+            <features value="Cms"/>
+            <stories value="open home page"/>
+            <title value="asdadsdasdasd"/>
+            <description value="asdasdasd"/>
+            <severity value="MINOR"/>
+            <group value="Cms"/>
+        </annotations>
+        <before>
+            <createData entity="Simple_US_Customer_NY" stepKey="createCustomer"/>
+        </before>
+        <after>
+            <deleteData createDataKey="createCustomer" stepKey="deleteCustomer"/>
+        </after>
+
+        <!-- TEST BODY -->
+        <actionGroup ref="StorefrontOpenHomePageActionGroup" stepKey="openHomePageFirstAttempt"/>
+        <actionGroup ref="StorefrontSeeLinkActionGroup" stepKey="runActionGroup">
+            <argument name="linkName" value="Search Terms" />
+        </actionGroup>
+        <!-- TEST BODY END -->
+    </test>
+</tests>
